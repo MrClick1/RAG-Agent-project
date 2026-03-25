@@ -39,3 +39,62 @@ ImportError: `pypdf` package not found, please install it with `pip install pypd
 2026-03-25 13:33:41,655 - agent - INFO - vector_store.py:100 - [加载知识库]D:\Code\Python\RAG-Agent-project\data\故障排除.txt 内容加载成功
 2026-03-25 13:33:46,172 - agent - INFO - vector_store.py:100 - [加载知识库]D:\Code\Python\RAG-Agent-project\data\维护保养.txt 内容加载成功
 2026-03-25 13:33:50,041 - agent - INFO - vector_store.py:100 - [加载知识库]D:\Code\Python\RAG-Agent-project\data\选购指南.txt 内容加载成功
+2026-03-25 14:44:54,323 - agent - WARNING - agent_tools.py:103 - [fetch_external_data]未能检索到用户：1001在2005-01的使用记录数据
+2026-03-25 14:45:14,663 - agent - WARNING - agent_tools.py:103 - [fetch_external_data]未能检索到用户：1001在2025-01的使用记录数据
+2026-03-25 15:33:18,320 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-25 15:33:18,320 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 扫地机器人在我所在的地区的气温下如何保养？
+2026-03-25 15:33:18,923 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_user_location
+2026-03-25 15:33:18,924 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-03-25 15:33:18,924 - agent - INFO - middleware.py:24 - [tool monitor]工具get_user_location调用成功
+2026-03-25 15:33:18,925 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-25 15:33:18,925 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 合肥
+2026-03-25 15:33:19,455 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_weather
+2026-03-25 15:33:19,455 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'city': '合肥'}
+2026-03-25 15:33:19,456 - agent - INFO - middleware.py:24 - [tool monitor]工具get_weather调用成功
+2026-03-25 15:33:19,457 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-25 15:33:19,457 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 城市合肥天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-03-25 15:33:19,974 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-03-25 15:33:19,974 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '扫地机器人保养'}
+2026-03-25 15:33:21,046 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-03-25 15:33:21,047 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-25 15:33:21,048 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 扫地机器人保养包括定期清理尘盒、滤网和边刷，检查并清理摄像头和传感器，避免使用过程中出现故障。同时应按照说明书要求进行充电和存放，保持机器清洁以延长使用寿命。
+2026-03-25 15:34:18,146 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-25 15:34:18,146 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 扫地机器人在我所在的地区的气温下如何保养？
+2026-03-25 15:34:18,713 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_user_location
+2026-03-25 15:34:18,714 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-03-25 15:34:18,715 - agent - INFO - middleware.py:24 - [tool monitor]工具get_user_location调用成功
+2026-03-25 15:34:18,716 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-25 15:34:18,716 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 杭州
+2026-03-25 15:34:19,251 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_weather
+2026-03-25 15:34:19,251 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'city': '杭州'}
+2026-03-25 15:34:19,252 - agent - INFO - middleware.py:24 - [tool monitor]工具get_weather调用成功
+2026-03-25 15:34:19,253 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-25 15:34:19,253 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 城市杭州天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-03-25 15:34:19,838 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-03-25 15:34:19,838 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '扫地机器人保养'}
+2026-03-25 15:34:21,178 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-03-25 15:34:21,179 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-25 15:34:21,179 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 扫地机器人保养包括定期清理尘盒、滤网和边刷，避免堵塞影响吸力；定期擦拭机器人底部和传感器，保持清洁；根据使用频率定期检查并更换磨损部件，如滚刷和滤芯；避免在潮湿或高温环境下长时间工作，防止电路受损。
+2026-03-25 15:39:29,832 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-25 15:39:29,832 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 扫地机器人在我所在的地区的气温下如何保养？
+2026-03-25 15:39:30,356 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_user_location
+2026-03-25 15:39:30,356 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-03-25 15:39:30,357 - agent - INFO - middleware.py:24 - [tool monitor]工具get_user_location调用成功
+2026-03-25 15:39:30,358 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-25 15:39:30,358 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 杭州
+2026-03-25 15:39:30,897 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_weather
+2026-03-25 15:39:30,897 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'city': '杭州'}
+2026-03-25 15:39:30,898 - agent - INFO - middleware.py:24 - [tool monitor]工具get_weather调用成功
+2026-03-25 15:39:30,899 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-25 15:39:30,899 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 城市杭州天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-03-25 15:39:31,654 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-03-25 15:39:31,654 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '扫地机器人保养 温度 湿度'}
+2026-03-25 15:39:32,724 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-03-25 15:39:32,724 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-25 15:39:32,725 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 扫地机器人保养时需注意环境温度和湿度，应避免在过高或过低的温度下使用，同时保持环境湿度适中，以确保机器正常运行和延长使用寿命。
+2026-03-25 15:44:23,644 - agent - INFO - vector_store.py:100 - [加载知识库]D:\Code\Python\RAG-Agent-project\data\扫地机器人100问.pdf 内容加载成功
+2026-03-25 15:44:28,881 - agent - INFO - vector_store.py:100 - [加载知识库]D:\Code\Python\RAG-Agent-project\data\扫地机器人100问2.txt 内容加载成功
+2026-03-25 15:44:34,057 - agent - INFO - vector_store.py:100 - [加载知识库]D:\Code\Python\RAG-Agent-project\data\扫拖一体机器人100问.txt 内容加载成功
+2026-03-25 15:44:42,410 - agent - INFO - vector_store.py:100 - [加载知识库]D:\Code\Python\RAG-Agent-project\data\故障排除.txt 内容加载成功
+2026-03-25 15:44:47,943 - agent - INFO - vector_store.py:100 - [加载知识库]D:\Code\Python\RAG-Agent-project\data\维护保养.txt 内容加载成功
+2026-03-25 15:44:52,214 - agent - INFO - vector_store.py:100 - [加载知识库]D:\Code\Python\RAG-Agent-project\data\选购指南.txt 内容加载成功

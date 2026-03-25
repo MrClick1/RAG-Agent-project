@@ -4,12 +4,17 @@
 """
 from langchain_core.documents import Document
 
-from vector_store import VectorStoreService
+from rag.vector_store import VectorStoreService
 from langchain_core.output_parsers import StrOutputParser
 from utils.prompt_loader import load_rag_prompts
 from langchain_core.prompts import PromptTemplate
 from model.factory import chat_model
 
+def print_prompt(prompt):
+    print("="*20)
+    print(prompt.to_string())
+    print("="*20)
+    return prompt
 
 class RagSummarizeService(object):
     def __init__(self):
@@ -21,7 +26,7 @@ class RagSummarizeService(object):
         self.chain = self._init_chain()
 
     def _init_chain(self):
-        chain = self.prompt_template | self.model | StrOutputParser()
+        chain = self.prompt_template | print_prompt | self.model | StrOutputParser()
         return chain
 
     def retriever_docs(self, query: str) -> list[Document]:
