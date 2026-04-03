@@ -61,4 +61,9 @@ agent_conf = load_agent_config()
 
 if __name__ == '__main__':
     # print(rag_conf["chat_model_name"])
-    print(chroma_conf)
+    # print(chroma_conf)
+
+    with open(get_abs_path("config/agent.yml"), "r", encoding="utf-8") as f:
+        config = yaml.load(f, Loader=yaml.FullLoader)
+        print(config)
+        print(_resolve_env_vars(config))

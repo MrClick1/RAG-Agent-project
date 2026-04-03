@@ -1,0 +1,30 @@
+2026-04-03 13:53:04,042 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-03 13:53:04,042 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 你好
+2026-04-03 13:53:17,059 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-03 13:53:17,060 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 今天天气如何
+2026-04-03 13:53:19,936 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_user_location
+2026-04-03 13:53:19,937 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-04-03 13:53:19,955 - agent - INFO - middleware.py:24 - [tool monitor]工具get_user_location调用成功
+2026-04-03 13:53:19,991 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-03 13:53:19,992 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 杭州
+2026-04-03 13:53:22,509 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_weather
+2026-04-03 13:53:22,510 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'city': '杭州'}
+2026-04-03 13:53:22,820 - agent - INFO - middleware.py:24 - [tool monitor]工具get_weather调用成功
+2026-04-03 13:53:23,306 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有5条消息。
+2026-04-03 13:53:23,307 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 城市：杭州市
+天气：中雨
+温度：14°C
+风向：西北
+风力：≤3级
+空气湿度：93%
+2026-04-03 15:05:37,658 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-04-03 15:05:37,659 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 深圳的天气怎么样？
+2026-04-03 15:05:42,268 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_weather_tool
+2026-04-03 15:05:42,269 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'city': '深圳'}
+2026-04-03 15:05:47,372 - agent - INFO - middleware.py:24 - [tool monitor]工具get_weather_tool调用成功
+2026-04-03 15:05:48,711 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-04-03 15:05:48,712 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 深圳市 天气预报：
+今天(2026-04-03)：雷阵雨，气温22~28°C，北风1-3级
+2026-04-04：大雨，气温21~23°C
+2026-04-05：中雨，气温23~27°C
+2026-04-06：小雨，气温23~28°C
