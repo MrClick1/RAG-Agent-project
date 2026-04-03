@@ -98,3 +98,39 @@ ImportError: `pypdf` package not found, please install it with `pip install pypd
 2026-03-25 15:44:42,410 - agent - INFO - vector_store.py:100 - [加载知识库]D:\Code\Python\RAG-Agent-project\data\故障排除.txt 内容加载成功
 2026-03-25 15:44:47,943 - agent - INFO - vector_store.py:100 - [加载知识库]D:\Code\Python\RAG-Agent-project\data\维护保养.txt 内容加载成功
 2026-03-25 15:44:52,214 - agent - INFO - vector_store.py:100 - [加载知识库]D:\Code\Python\RAG-Agent-project\data\选购指南.txt 内容加载成功
+2026-03-25 15:48:38,997 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-25 15:48:38,999 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 你好
+2026-03-25 15:49:57,136 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-25 15:49:57,136 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 在我当前所在的位置的天气下，机器人如何保养？
+2026-03-25 15:49:58,508 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_user_location
+2026-03-25 15:49:58,509 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-03-25 15:49:58,509 - agent - INFO - middleware.py:24 - [tool monitor]工具get_user_location调用成功
+2026-03-25 15:49:58,545 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-25 15:49:58,546 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 深圳
+2026-03-25 15:49:59,909 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_weather
+2026-03-25 15:49:59,909 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'city': '深圳'}
+2026-03-25 15:49:59,911 - agent - INFO - middleware.py:24 - [tool monitor]工具get_weather调用成功
+2026-03-25 15:50:00,474 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-25 15:50:00,476 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 城市深圳天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-03-25 15:52:24,910 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-03-25 15:52:24,910 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 帮我生成我的使用报告
+2026-03-25 15:52:25,468 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_user_id
+2026-03-25 15:52:25,468 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-03-25 15:52:25,469 - agent - INFO - middleware.py:24 - [tool monitor]工具get_user_id调用成功
+2026-03-25 15:52:25,528 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-03-25 15:52:25,528 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 1001
+2026-03-25 15:52:26,157 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：get_current_month
+2026-03-25 15:52:26,158 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-03-25 15:52:26,159 - agent - INFO - middleware.py:24 - [tool monitor]工具get_current_month调用成功
+2026-03-25 15:52:26,252 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有5条消息。
+2026-03-25 15:52:26,253 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 2025-02
+2026-03-25 15:52:26,792 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：fill_context_for_report
+2026-03-25 15:52:26,792 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{}
+2026-03-25 15:52:26,794 - agent - INFO - middleware.py:24 - [tool monitor]工具fill_context_for_report调用成功
+2026-03-25 15:52:27,108 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有7条消息。
+2026-03-25 15:52:27,109 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-03-25 15:52:27,972 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：fetch_external_data
+2026-03-25 15:52:27,973 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'user_id': '1001', 'month': '2025-02'}
+2026-03-25 15:52:27,976 - agent - INFO - middleware.py:24 - [tool monitor]工具fetch_external_data调用成功
+2026-03-25 15:52:29,542 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有9条消息。
+2026-03-25 15:52:29,543 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | {"特征": "65㎡公寓 | 单身 | 木地板", "效率": "覆盖率:86%\\n日均清扫:46㎡\\n漏扫区域:沙发底部（高度不足）", "耗材": "主刷寿命:剩余55天\\nHEPA滤网:剩余35%", "对比": "优于68%同面积用户（清洁频率更高）"}

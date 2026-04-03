@@ -22,7 +22,44 @@ def rag_summarize(query: str) -> str:
 
 @tool(description="获取指定城市的天气，以消息字符串的形式返回")
 def get_weather(city: str) -> str:
-    return f"城市{city}天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低"
+    """
+    获取指定城市的天气信息（使用高德API）
+
+    Args:
+        city: 城市名称，如"北京"、"上海"、"深圳"
+
+    Returns:
+        天气信息字符串，包含城市、天气、温度、风向、风力、湿度等
+    """
+    import requests
+
+    api_key = agent_conf.get("amap_key", "your_amap_api_key")
+    url = "https://restapi.amap.com/v3/weather/weatherInfo"
+    params = {
+        "key": api_key,
+        "city": city,
+        "extensions": "base"
+    }
+
+    try:
+        response = requests.get(url, params=params, timeout=5)
+        data = response.json()
+
+        if data.get("status") == "1" and data.get("lives"):
+            live = data["lives"][0]
+            return (
+                f"城市：{live.get('city', '未知')}\n"
+                f"天气：{live.get('weather', '未知')}\n"
+                f"温度：{live.get('temperature', '?')}°C\n"
+                f"风向：{live.get('winddirection', '未知')}\n"
+                f"风力：{live.get('windpower', '未知')}级\n"
+                f"空气湿度：{live.get('humidity', '未知')}%"
+            )
+        else:
+            error_info = data.get('info', '未知错误')
+            return f"查询失败：{error_info}"
+    except Exception as e:
+        return f"系统异常：{str(e)}"
 
 
 @tool(description="获取用户所在城市的名称，以纯字符串形式返回")

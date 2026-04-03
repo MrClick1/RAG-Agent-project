@@ -1,1 +1,5 @@
 external_data_path: data/external/records.csv
+
+# 高德地图API Key (用于天气查询)
+# 请到 https://lbs.amap.com/ 申请
+amap_key: ${AMAP_KEY}

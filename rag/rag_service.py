@@ -34,7 +34,7 @@ class RagSummarizeService(object):
 
     def rag_summarize(self, query: str):
 
-        context_docs = self.retriever_docs(query)
+        context_docs: list[Document] = self.retriever_docs(query)
         context = ""
         counter = 0
 
